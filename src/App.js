@@ -13,16 +13,30 @@ function App() {
     <div className="App">
       <Person></Person>
       <Person></Person>
+      <Person></Person>
+      <Person></Person>
+      <h5>New Component</h5>
+      <p>Rock Mama React Mama</p>
+      <Friend></Friend>
+      <Friend></Friend>
     </div>
   );
 }
 
 function Person(){
   return (
-    <div >
+    <div className="person">
       <h1>Sakib Al Hasan</h1>
       <p>Profession: Crickter</p>
     </div> 
+  )
+}
+function  Friend(){
+  return (
+    <div className='container'>
+      <h3>Name: Ajay Devgan</h3>
+      <p>Job: Maramari</p>
+    </div>
   )
 }
 
