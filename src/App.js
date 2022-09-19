@@ -1,19 +1,34 @@
 import logo from './logo.svg';
 import './App.css';
 const number = 55555;
-const singer = {name: 'Mahfuz', job: 'singer'}
-const singer2 = {name: 'Eva Rahman', job: 'Singer2'}
+const singers = [
+  {name: 'Mahfuz', job: 'singer'},
+  {name: 'Eva Rahman', job: 'Singer2'},
+  {name: 'Agun', job: 'Sopno'},
+  {name: 'Shuvro Dev', job: 'Pathor'}
+]
 
 const singerStyle = {
   color: 'red',
   backgroundColor: 'white'
 }
 function App() {
+  const nayoks = ['Rubel', 'BappaRaz', 'Mubel', 'Joshim', 'Salman Sha', 'Riyaz']
   return (
     <div className="App">
-      <Person name="Rubel" naika="Mousumi"></Person>
-      <Person name="Mubel" naika="Cheka"></Person>
-      <Person name="kuber" naika="kopila"></Person>
+      {
+        nayoks.map(nayok => <li>Name:{nayok}</li>)
+      }
+      {/* {
+        nayoks.map(nayok => <Person name={nayok}></Person>)
+      } */}
+
+      {
+        singers.map(singer => <Person name={singer.name}></Person>)
+      }
+      {/* <Person name={nayoks[0]} naika="Mousumi"></Person>
+      <Person name={nayoks[1]} naika="Cheka"></Person>
+      <Person name={nayoks[2]} naika="kopila"></Person> */}
       <h5>New Component</h5>
       <p>Rock Mama React Mama</p>
       <Friend movie="singham" phone="01774412135"></Friend>
