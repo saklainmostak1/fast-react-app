@@ -1,25 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
+const number = 55555;
+const singer = {name: 'Mahfuz', job: 'singer'}
+const singer2 = {name: 'Eva Rahman', job: 'Singer2'}
 
+const singerStyle = {
+  color: 'red',
+  backgroundColor: 'white'
+}
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Person></Person>
+      <Person></Person>
     </div>
   );
+}
+
+function Person(){
+  return (
+    <div >
+      <h1>Sakib Al Hasan</h1>
+      <p>Profession: Crickter</p>
+    </div> 
+  )
 }
 
 export default App;
