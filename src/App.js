@@ -11,31 +11,32 @@ const singerStyle = {
 function App() {
   return (
     <div className="App">
-      <Person></Person>
-      <Person></Person>
-      <Person></Person>
-      <Person></Person>
+      <Person name="Rubel" naika="Mousumi"></Person>
+      <Person name="Mubel" naika="Cheka"></Person>
+      <Person name="kuber" naika="kopila"></Person>
       <h5>New Component</h5>
       <p>Rock Mama React Mama</p>
-      <Friend></Friend>
-      <Friend></Friend>
+      <Friend movie="singham" phone="01774412135"></Friend>
+      <Friend phone="01915106077"></Friend>
     </div>
   );
 }
 
-function Person(){
+function Person(props){
+  // console.log(props);
   return (
     <div className="person">
-      <h1>Sakib Al Hasan</h1>
-      <p>Profession: Crickter</p>
+      <h1>{props.name}</h1>
+      <p>Naika: {props.naika}</p>
     </div> 
   )
 }
-function  Friend(){
+function  Friend(props){
+  console.log(props)
   return (
     <div className='container'>
-      <h3>Name: Ajay Devgan</h3>
-      <p>Job: Maramari</p>
+      <h3>Name: {props.movie} </h3>
+      <p>Phone {props.phone} </p>
     </div>
   )
 }
